@@ -3,13 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4A68C1FA1DB504C30063CA01 /* u2fFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A68C1F01DB504C30063CA01 /* u2fFramework.framework */; };
 		4A68C1FF1DB504C30063CA01 /* u2fFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C1FE1DB504C30063CA01 /* u2fFrameworkTests.swift */; };
 		4A68C2011DB504C30063CA01 /* u2fFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A68C1F31DB504C30063CA01 /* u2fFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A68C20B1DB505980063CA01 /* u2fFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C20A1DB505980063CA01 /* u2fFramework.swift */; };
+		4A68C20D1DB5118B0063CA01 /* APDU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C20C1DB5118B0063CA01 /* APDU.swift */; };
+		4A68C20F1DB517D10063CA01 /* APDUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C20E1DB517D10063CA01 /* APDUTests.swift */; };
+		4A68C2111DB5474F0063CA01 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2101DB5474F0063CA01 /* Utils.swift */; };
+		4A68C2131DB547A40063CA01 /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2121DB547A40063CA01 /* UtilsTests.swift */; };
+		4A68C2171DB5D03E0063CA01 /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2141DB5D03E0063CA01 /* DataReader.swift */; };
+		4A68C2181DB5D03E0063CA01 /* DataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2151DB5D03E0063CA01 /* DataWriter.swift */; };
+		4A68C2191DB5D03E0063CA01 /* EndianConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2161DB5D03E0063CA01 /* EndianConvertible.swift */; };
+		4A68C21D1DB5D77B0063CA01 /* DataWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C21C1DB5D77B0063CA01 /* DataWriterTests.swift */; };
+		4A68C21F1DB5F3F00063CA01 /* DataReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C21E1DB5F3F00063CA01 /* DataReaderTests.swift */; };
+		4A68C2201DB5FB880063CA01 /* TransportHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C21A1DB5D0600063CA01 /* TransportHelper.swift */; };
+		4A68C2221DB5FCA30063CA01 /* TransportHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2211DB5FCA30063CA01 /* TransportHelperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +41,18 @@
 		4A68C1F91DB504C30063CA01 /* u2fFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = u2fFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A68C1FE1DB504C30063CA01 /* u2fFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = u2fFrameworkTests.swift; sourceTree = "<group>"; };
 		4A68C2001DB504C30063CA01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A68C20A1DB505980063CA01 /* u2fFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = u2fFramework.swift; sourceTree = "<group>"; };
+		4A68C20C1DB5118B0063CA01 /* APDU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APDU.swift; sourceTree = "<group>"; };
+		4A68C20E1DB517D10063CA01 /* APDUTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APDUTests.swift; sourceTree = "<group>"; };
+		4A68C2101DB5474F0063CA01 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		4A68C2121DB547A40063CA01 /* UtilsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilsTests.swift; sourceTree = "<group>"; };
+		4A68C2141DB5D03E0063CA01 /* DataReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataReader.swift; sourceTree = "<group>"; };
+		4A68C2151DB5D03E0063CA01 /* DataWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataWriter.swift; sourceTree = "<group>"; };
+		4A68C2161DB5D03E0063CA01 /* EndianConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndianConvertible.swift; sourceTree = "<group>"; };
+		4A68C21A1DB5D0600063CA01 /* TransportHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportHelper.swift; sourceTree = "<group>"; };
+		4A68C21C1DB5D77B0063CA01 /* DataWriterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataWriterTests.swift; sourceTree = "<group>"; };
+		4A68C21E1DB5F3F00063CA01 /* DataReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataReaderTests.swift; sourceTree = "<group>"; };
+		4A68C2211DB5FCA30063CA01 /* TransportHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportHelperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +97,13 @@
 			children = (
 				4A68C1F31DB504C30063CA01 /* u2fFramework.h */,
 				4A68C1F41DB504C30063CA01 /* Info.plist */,
+				4A68C20A1DB505980063CA01 /* u2fFramework.swift */,
+				4A68C20C1DB5118B0063CA01 /* APDU.swift */,
+				4A68C2101DB5474F0063CA01 /* Utils.swift */,
+				4A68C21A1DB5D0600063CA01 /* TransportHelper.swift */,
+				4A68C2141DB5D03E0063CA01 /* DataReader.swift */,
+				4A68C2151DB5D03E0063CA01 /* DataWriter.swift */,
+				4A68C2161DB5D03E0063CA01 /* EndianConvertible.swift */,
 			);
 			path = u2fFramework;
 			sourceTree = "<group>";
@@ -81,6 +112,11 @@
 			isa = PBXGroup;
 			children = (
 				4A68C1FE1DB504C30063CA01 /* u2fFrameworkTests.swift */,
+				4A68C20E1DB517D10063CA01 /* APDUTests.swift */,
+				4A68C21C1DB5D77B0063CA01 /* DataWriterTests.swift */,
+				4A68C2211DB5FCA30063CA01 /* TransportHelperTests.swift */,
+				4A68C21E1DB5F3F00063CA01 /* DataReaderTests.swift */,
+				4A68C2121DB547A40063CA01 /* UtilsTests.swift */,
 				4A68C2001DB504C30063CA01 /* Info.plist */,
 			);
 			path = u2fFrameworkTests;
@@ -148,18 +184,17 @@
 				TargetAttributes = {
 					4A68C1EF1DB504C30063CA01 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 3HSG7M3SCR;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					4A68C1F81DB504C30063CA01 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 3HSG7M3SCR;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 4A68C1EA1DB504C30063CA01 /* Build configuration list for PBXProject "u2fFramework" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -198,6 +233,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A68C2171DB5D03E0063CA01 /* DataReader.swift in Sources */,
+				4A68C20B1DB505980063CA01 /* u2fFramework.swift in Sources */,
+				4A68C2201DB5FB880063CA01 /* TransportHelper.swift in Sources */,
+				4A68C2181DB5D03E0063CA01 /* DataWriter.swift in Sources */,
+				4A68C20D1DB5118B0063CA01 /* APDU.swift in Sources */,
+				4A68C2191DB5D03E0063CA01 /* EndianConvertible.swift in Sources */,
+				4A68C2111DB5474F0063CA01 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +248,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A68C1FF1DB504C30063CA01 /* u2fFrameworkTests.swift in Sources */,
+				4A68C20F1DB517D10063CA01 /* APDUTests.swift in Sources */,
+				4A68C21F1DB5F3F00063CA01 /* DataReaderTests.swift in Sources */,
+				4A68C2221DB5FCA30063CA01 /* TransportHelperTests.swift in Sources */,
+				4A68C21D1DB5D77B0063CA01 /* DataWriterTests.swift in Sources */,
+				4A68C2131DB547A40063CA01 /* UtilsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +369,7 @@
 		4A68C2051DB504C30063CA01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3HSG7M3SCR;
@@ -330,10 +378,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = u2fFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tr1ckyf0x.u2fFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +391,7 @@
 		4A68C2061DB504C30063CA01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3HSG7M3SCR;
@@ -349,6 +400,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = u2fFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tr1ckyf0x.u2fFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,6 +412,7 @@
 		4A68C2081DB504C30063CA01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3HSG7M3SCR;
 				INFOPLIST_FILE = u2fFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +425,7 @@
 		4A68C2091DB504C30063CA01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3HSG7M3SCR;
 				INFOPLIST_FILE = u2fFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
