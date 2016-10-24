@@ -58,7 +58,7 @@ internal struct APDU {
         return Data(bytes: [CLA, INS, P1, P2, LC1, LC2, LC3] + DATA)
     }
     
-    static func parseRegistrationResponse(data: Data) throws -> (publicKey: Data, keyHandle: Data, attestationCertificate: Data, signature: Data) {
+    static func parseRegistrationResponse(_ data: Data) throws -> (publicKey: Data, keyHandle: Data, attestationCertificate: Data, signature: Data) {
         
         let reader = DataReader(data: data)
         
@@ -118,7 +118,26 @@ internal struct APDU {
         return (publicKey, keyHandle, finalCertificate, finalSignature)
     }
     
-//    static func parseAuthenticationResponse(data: Data) throws -> (userPresence: UInt8, counter: UInt32, signature: [UInt8]) {
-//        
-//    }
+    static func parseAuthenticationResponse(_ data: Data) throws -> (userPresence: UInt8, counter: UInt32, signature: Data) {
+        
+        let reader = DataReader(data: data)
+        
+        guard
+            let userPresence = reader.readNextUInt8(),
+            let counter = reader.readNextBigEndianUInt32()
+        else { throw APDUError.parseError }
+        
+        guard
+            let derSequence = reader.readNextUInt8(), derSequence == APDU.derSeqByte,
+            let signatureLength = reader.readNextUInt8(),
+            let signature = reader.readNextDataOfLength(Int(signatureLength))
+        else { throw APDUError.parseError }
+        
+        var finalSignature = Data()
+        finalSignature.append([derSequence], count: 1)
+        finalSignature.append([signatureLength], count: 1)
+        finalSignature.append(signature)
+        
+        return (userPresence,counter,finalSignature)
+    }
 }
