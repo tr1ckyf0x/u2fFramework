@@ -22,6 +22,8 @@
 		4A68C21F1DB5F3F00063CA01 /* DataReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C21E1DB5F3F00063CA01 /* DataReaderTests.swift */; };
 		4A68C2201DB5FB880063CA01 /* TransportHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C21A1DB5D0600063CA01 /* TransportHelper.swift */; };
 		4A68C2221DB5FCA30063CA01 /* TransportHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2211DB5FCA30063CA01 /* TransportHelperTests.swift */; };
+		4AC8BB6A1E6AEE930087E432 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8BB691E6AEE930087E432 /* DeviceManager.swift */; };
+		4AC8BB6C1E6AFAC20087E432 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8BB6B1E6AFAC20087E432 /* BluetoothManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		4A68C21C1DB5D77B0063CA01 /* DataWriterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataWriterTests.swift; sourceTree = "<group>"; };
 		4A68C21E1DB5F3F00063CA01 /* DataReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataReaderTests.swift; sourceTree = "<group>"; };
 		4A68C2211DB5FCA30063CA01 /* TransportHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportHelperTests.swift; sourceTree = "<group>"; };
+		4AC8BB691E6AEE930087E432 /* DeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		4AC8BB6B1E6AFAC20087E432 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 				4A68C1F41DB504C30063CA01 /* Info.plist */,
 				4A68C20A1DB505980063CA01 /* u2fFramework.swift */,
 				4A68C20C1DB5118B0063CA01 /* APDU.swift */,
+				4AC8BB691E6AEE930087E432 /* DeviceManager.swift */,
+				4AC8BB6B1E6AFAC20087E432 /* BluetoothManager.swift */,
 				4A68C2101DB5474F0063CA01 /* Utils.swift */,
 				4A68C21A1DB5D0600063CA01 /* TransportHelper.swift */,
 				4A68C2141DB5D03E0063CA01 /* DataReader.swift */,
@@ -114,8 +120,8 @@
 				4A68C1FE1DB504C30063CA01 /* u2fFrameworkTests.swift */,
 				4A68C20E1DB517D10063CA01 /* APDUTests.swift */,
 				4A68C21C1DB5D77B0063CA01 /* DataWriterTests.swift */,
-				4A68C2211DB5FCA30063CA01 /* TransportHelperTests.swift */,
 				4A68C21E1DB5F3F00063CA01 /* DataReaderTests.swift */,
+				4A68C2211DB5FCA30063CA01 /* TransportHelperTests.swift */,
 				4A68C2121DB547A40063CA01 /* UtilsTests.swift */,
 				4A68C2001DB504C30063CA01 /* Info.plist */,
 			);
@@ -179,7 +185,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Владислав Лисянский";
 				TargetAttributes = {
 					4A68C1EF1DB504C30063CA01 = {
@@ -234,11 +240,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A68C2171DB5D03E0063CA01 /* DataReader.swift in Sources */,
+				4AC8BB6A1E6AEE930087E432 /* DeviceManager.swift in Sources */,
 				4A68C20B1DB505980063CA01 /* u2fFramework.swift in Sources */,
 				4A68C2201DB5FB880063CA01 /* TransportHelper.swift in Sources */,
 				4A68C2181DB5D03E0063CA01 /* DataWriter.swift in Sources */,
 				4A68C20D1DB5118B0063CA01 /* APDU.swift in Sources */,
 				4A68C2191DB5D03E0063CA01 /* EndianConvertible.swift in Sources */,
+				4AC8BB6C1E6AFAC20087E432 /* BluetoothManager.swift in Sources */,
 				4A68C2111DB5474F0063CA01 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +293,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -338,6 +347,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -454,6 +464,7 @@
 				4A68C2061DB504C30063CA01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A68C2071DB504C30063CA01 /* Build configuration list for PBXNativeTarget "u2fFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +473,7 @@
 				4A68C2091DB504C30063CA01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
