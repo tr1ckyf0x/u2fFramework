@@ -16,4 +16,6 @@ FOUNDATION_EXPORT const unsigned char u2fFrameworkVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <u2fFramework/PublicHeader.h>
 
-
+#import "GMEllipticCurveCrypto.h"
+#import "GMEllipticCurveCrypto+hash.h"
+#import "Keychain.h"

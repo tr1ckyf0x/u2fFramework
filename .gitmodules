@@ -1,0 +1,3 @@
+[submodule "u2fFramework/GMEllipticCurveCrypto"]
+	path = u2fFramework/GMEllipticCurveCrypto
+	url = git@github.com:ricmoo/GMEllipticCurveCrypto.git

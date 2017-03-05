@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4A68C1FA1DB504C30063CA01 /* u2fFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A68C1F01DB504C30063CA01 /* u2fFramework.framework */; };
-		4A68C1FF1DB504C30063CA01 /* u2fFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C1FE1DB504C30063CA01 /* u2fFrameworkTests.swift */; };
 		4A68C2011DB504C30063CA01 /* u2fFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A68C1F31DB504C30063CA01 /* u2fFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A68C20B1DB505980063CA01 /* u2fFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C20A1DB505980063CA01 /* u2fFramework.swift */; };
 		4A68C20D1DB5118B0063CA01 /* APDU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C20C1DB5118B0063CA01 /* APDU.swift */; };
@@ -22,8 +21,21 @@
 		4A68C21F1DB5F3F00063CA01 /* DataReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C21E1DB5F3F00063CA01 /* DataReaderTests.swift */; };
 		4A68C2201DB5FB880063CA01 /* TransportHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C21A1DB5D0600063CA01 /* TransportHelper.swift */; };
 		4A68C2221DB5FCA30063CA01 /* TransportHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2211DB5FCA30063CA01 /* TransportHelperTests.swift */; };
+		4A97C0141E6C2F9D0002911F /* CryptoHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A97C0131E6C2F9D0002911F /* CryptoHelperTests.swift */; };
 		4AC8BB6A1E6AEE930087E432 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8BB691E6AEE930087E432 /* DeviceManager.swift */; };
 		4AC8BB6C1E6AFAC20087E432 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8BB6B1E6AFAC20087E432 /* BluetoothManager.swift */; };
+		4AC905601E6C99300020EBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC9055F1E6C99300020EBDD /* AppDelegate.swift */; };
+		4AC905621E6C99300020EBDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC905611E6C99300020EBDD /* ViewController.swift */; };
+		4AC905651E6C99300020EBDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC905631E6C99300020EBDD /* Main.storyboard */; };
+		4AC905671E6C99300020EBDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC905661E6C99300020EBDD /* Assets.xcassets */; };
+		4AC9056A1E6C99300020EBDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AC905681E6C99300020EBDD /* LaunchScreen.storyboard */; };
+		4AD623B61E6C136B00E70307 /* GMEllipticCurveCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD623B21E6C136B00E70307 /* GMEllipticCurveCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AD623B71E6C136B00E70307 /* GMEllipticCurveCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD623B31E6C136B00E70307 /* GMEllipticCurveCrypto.m */; };
+		4AD623B81E6C136B00E70307 /* GMEllipticCurveCrypto+hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD623B41E6C136B00E70307 /* GMEllipticCurveCrypto+hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AD623B91E6C136B00E70307 /* GMEllipticCurveCrypto+hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD623B51E6C136B00E70307 /* GMEllipticCurveCrypto+hash.m */; };
+		4AD623BD1E6C142800E70307 /* Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD623BB1E6C142800E70307 /* Keychain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AD623BE1E6C142800E70307 /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD623BC1E6C142800E70307 /* Keychain.m */; };
+		4AF23F051E6C163D009FC2E2 /* CryptoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF23F041E6C163D009FC2E2 /* CryptoHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +46,13 @@
 			remoteGlobalIDString = 4A68C1EF1DB504C30063CA01;
 			remoteInfo = u2fFramework;
 		};
+		4AC905701E6C99650020EBDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A68C1E71DB504C30063CA01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AC9055C1E6C99300020EBDD;
+			remoteInfo = u2fFrameworkDemo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +60,6 @@
 		4A68C1F31DB504C30063CA01 /* u2fFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = u2fFramework.h; sourceTree = "<group>"; };
 		4A68C1F41DB504C30063CA01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A68C1F91DB504C30063CA01 /* u2fFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = u2fFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A68C1FE1DB504C30063CA01 /* u2fFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = u2fFrameworkTests.swift; sourceTree = "<group>"; };
 		4A68C2001DB504C30063CA01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A68C20A1DB505980063CA01 /* u2fFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = u2fFramework.swift; sourceTree = "<group>"; };
 		4A68C20C1DB5118B0063CA01 /* APDU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APDU.swift; sourceTree = "<group>"; };
@@ -55,8 +73,24 @@
 		4A68C21C1DB5D77B0063CA01 /* DataWriterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataWriterTests.swift; sourceTree = "<group>"; };
 		4A68C21E1DB5F3F00063CA01 /* DataReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataReaderTests.swift; sourceTree = "<group>"; };
 		4A68C2211DB5FCA30063CA01 /* TransportHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportHelperTests.swift; sourceTree = "<group>"; };
+		4A97C0131E6C2F9D0002911F /* CryptoHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoHelperTests.swift; sourceTree = "<group>"; };
 		4AC8BB691E6AEE930087E432 /* DeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
 		4AC8BB6B1E6AFAC20087E432 /* BluetoothManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		4AC9055D1E6C99300020EBDD /* u2fFrameworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = u2fFrameworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AC9055F1E6C99300020EBDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4AC905611E6C99300020EBDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4AC905641E6C99300020EBDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4AC905661E6C99300020EBDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4AC905691E6C99300020EBDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4AC9056B1E6C99300020EBDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AC9056F1E6C99480020EBDD /* u2fFrameworkDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = u2fFrameworkDemo.entitlements; sourceTree = "<group>"; };
+		4AD623B21E6C136B00E70307 /* GMEllipticCurveCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GMEllipticCurveCrypto.h; path = GMEllipticCurveCrypto/GMEllipticCurveCrypto.h; sourceTree = "<group>"; };
+		4AD623B31E6C136B00E70307 /* GMEllipticCurveCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GMEllipticCurveCrypto.m; path = GMEllipticCurveCrypto/GMEllipticCurveCrypto.m; sourceTree = "<group>"; };
+		4AD623B41E6C136B00E70307 /* GMEllipticCurveCrypto+hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GMEllipticCurveCrypto+hash.h"; path = "GMEllipticCurveCrypto/GMEllipticCurveCrypto+hash.h"; sourceTree = "<group>"; };
+		4AD623B51E6C136B00E70307 /* GMEllipticCurveCrypto+hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GMEllipticCurveCrypto+hash.m"; path = "GMEllipticCurveCrypto/GMEllipticCurveCrypto+hash.m"; sourceTree = "<group>"; };
+		4AD623BB1E6C142800E70307 /* Keychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keychain.h; sourceTree = "<group>"; };
+		4AD623BC1E6C142800E70307 /* Keychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keychain.m; sourceTree = "<group>"; };
+		4AF23F041E6C163D009FC2E2 /* CryptoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +109,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4AC9055A1E6C99300020EBDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,6 +124,7 @@
 			children = (
 				4A68C1F21DB504C30063CA01 /* u2fFramework */,
 				4A68C1FD1DB504C30063CA01 /* u2fFrameworkTests */,
+				4AC9055E1E6C99300020EBDD /* u2fFrameworkDemo */,
 				4A68C1F11DB504C30063CA01 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +134,7 @@
 			children = (
 				4A68C1F01DB504C30063CA01 /* u2fFramework.framework */,
 				4A68C1F91DB504C30063CA01 /* u2fFrameworkTests.xctest */,
+				4AC9055D1E6C99300020EBDD /* u2fFrameworkDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,13 +146,9 @@
 				4A68C1F41DB504C30063CA01 /* Info.plist */,
 				4A68C20A1DB505980063CA01 /* u2fFramework.swift */,
 				4A68C20C1DB5118B0063CA01 /* APDU.swift */,
-				4AC8BB691E6AEE930087E432 /* DeviceManager.swift */,
-				4AC8BB6B1E6AFAC20087E432 /* BluetoothManager.swift */,
-				4A68C2101DB5474F0063CA01 /* Utils.swift */,
-				4A68C21A1DB5D0600063CA01 /* TransportHelper.swift */,
-				4A68C2141DB5D03E0063CA01 /* DataReader.swift */,
-				4A68C2151DB5D03E0063CA01 /* DataWriter.swift */,
-				4A68C2161DB5D03E0063CA01 /* EndianConvertible.swift */,
+				4AD623C01E6C146100E70307 /* Managers */,
+				4AD623BF1E6C144D00E70307 /* Utils */,
+				4AD623BA1E6C138D00E70307 /* GMEllipticCurveCrypto */,
 			);
 			path = u2fFramework;
 			sourceTree = "<group>";
@@ -117,7 +156,7 @@
 		4A68C1FD1DB504C30063CA01 /* u2fFrameworkTests */ = {
 			isa = PBXGroup;
 			children = (
-				4A68C1FE1DB504C30063CA01 /* u2fFrameworkTests.swift */,
+				4A97C0131E6C2F9D0002911F /* CryptoHelperTests.swift */,
 				4A68C20E1DB517D10063CA01 /* APDUTests.swift */,
 				4A68C21C1DB5D77B0063CA01 /* DataWriterTests.swift */,
 				4A68C21E1DB5F3F00063CA01 /* DataReaderTests.swift */,
@@ -128,6 +167,55 @@
 			path = u2fFrameworkTests;
 			sourceTree = "<group>";
 		};
+		4AC9055E1E6C99300020EBDD /* u2fFrameworkDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4AC9056F1E6C99480020EBDD /* u2fFrameworkDemo.entitlements */,
+				4AC9055F1E6C99300020EBDD /* AppDelegate.swift */,
+				4AC905611E6C99300020EBDD /* ViewController.swift */,
+				4AC905631E6C99300020EBDD /* Main.storyboard */,
+				4AC905661E6C99300020EBDD /* Assets.xcassets */,
+				4AC905681E6C99300020EBDD /* LaunchScreen.storyboard */,
+				4AC9056B1E6C99300020EBDD /* Info.plist */,
+			);
+			path = u2fFrameworkDemo;
+			sourceTree = "<group>";
+		};
+		4AD623BA1E6C138D00E70307 /* GMEllipticCurveCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				4AD623B21E6C136B00E70307 /* GMEllipticCurveCrypto.h */,
+				4AD623B31E6C136B00E70307 /* GMEllipticCurveCrypto.m */,
+				4AD623B41E6C136B00E70307 /* GMEllipticCurveCrypto+hash.h */,
+				4AD623B51E6C136B00E70307 /* GMEllipticCurveCrypto+hash.m */,
+			);
+			name = GMEllipticCurveCrypto;
+			sourceTree = "<group>";
+		};
+		4AD623BF1E6C144D00E70307 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4A68C2101DB5474F0063CA01 /* Utils.swift */,
+				4A68C21A1DB5D0600063CA01 /* TransportHelper.swift */,
+				4AF23F041E6C163D009FC2E2 /* CryptoHelper.swift */,
+				4A68C2141DB5D03E0063CA01 /* DataReader.swift */,
+				4A68C2151DB5D03E0063CA01 /* DataWriter.swift */,
+				4A68C2161DB5D03E0063CA01 /* EndianConvertible.swift */,
+				4AD623BB1E6C142800E70307 /* Keychain.h */,
+				4AD623BC1E6C142800E70307 /* Keychain.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		4AD623C01E6C146100E70307 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4AC8BB691E6AEE930087E432 /* DeviceManager.swift */,
+				4AC8BB6B1E6AFAC20087E432 /* BluetoothManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -135,7 +223,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AD623BD1E6C142800E70307 /* Keychain.h in Headers */,
 				4A68C2011DB504C30063CA01 /* u2fFramework.h in Headers */,
+				4AD623B81E6C136B00E70307 /* GMEllipticCurveCrypto+hash.h in Headers */,
+				4AD623B61E6C136B00E70307 /* GMEllipticCurveCrypto.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,11 +263,29 @@
 			);
 			dependencies = (
 				4A68C1FC1DB504C30063CA01 /* PBXTargetDependency */,
+				4AC905711E6C99650020EBDD /* PBXTargetDependency */,
 			);
 			name = u2fFrameworkTests;
 			productName = u2fFrameworkTests;
 			productReference = 4A68C1F91DB504C30063CA01 /* u2fFrameworkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4AC9055C1E6C99300020EBDD /* u2fFrameworkDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AC9056E1E6C99300020EBDD /* Build configuration list for PBXNativeTarget "u2fFrameworkDemo" */;
+			buildPhases = (
+				4AC905591E6C99300020EBDD /* Sources */,
+				4AC9055A1E6C99300020EBDD /* Frameworks */,
+				4AC9055B1E6C99300020EBDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = u2fFrameworkDemo;
+			productName = u2fFrameworkDemo;
+			productReference = 4AC9055D1E6C99300020EBDD /* u2fFrameworkDemo.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -184,7 +293,7 @@
 		4A68C1E71DB504C30063CA01 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Владислав Лисянский";
 				TargetAttributes = {
@@ -196,6 +305,16 @@
 					4A68C1F81DB504C30063CA01 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 4AC9055C1E6C99300020EBDD;
+					};
+					4AC9055C1E6C99300020EBDD = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -205,6 +324,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 4A68C1E61DB504C30063CA01;
 			productRefGroup = 4A68C1F11DB504C30063CA01 /* Products */;
@@ -213,6 +333,7 @@
 			targets = (
 				4A68C1EF1DB504C30063CA01 /* u2fFramework */,
 				4A68C1F81DB504C30063CA01 /* u2fFrameworkTests */,
+				4AC9055C1E6C99300020EBDD /* u2fFrameworkDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -232,6 +353,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4AC9055B1E6C99300020EBDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC9056A1E6C99300020EBDD /* LaunchScreen.storyboard in Resources */,
+				4AC905671E6C99300020EBDD /* Assets.xcassets in Resources */,
+				4AC905651E6C99300020EBDD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -239,13 +370,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AD623B71E6C136B00E70307 /* GMEllipticCurveCrypto.m in Sources */,
 				4A68C2171DB5D03E0063CA01 /* DataReader.swift in Sources */,
 				4AC8BB6A1E6AEE930087E432 /* DeviceManager.swift in Sources */,
 				4A68C20B1DB505980063CA01 /* u2fFramework.swift in Sources */,
 				4A68C2201DB5FB880063CA01 /* TransportHelper.swift in Sources */,
 				4A68C2181DB5D03E0063CA01 /* DataWriter.swift in Sources */,
+				4AD623B91E6C136B00E70307 /* GMEllipticCurveCrypto+hash.m in Sources */,
 				4A68C20D1DB5118B0063CA01 /* APDU.swift in Sources */,
+				4AF23F051E6C163D009FC2E2 /* CryptoHelper.swift in Sources */,
 				4A68C2191DB5D03E0063CA01 /* EndianConvertible.swift in Sources */,
+				4AD623BE1E6C142800E70307 /* Keychain.m in Sources */,
 				4AC8BB6C1E6AFAC20087E432 /* BluetoothManager.swift in Sources */,
 				4A68C2111DB5474F0063CA01 /* Utils.swift in Sources */,
 			);
@@ -255,12 +390,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A68C1FF1DB504C30063CA01 /* u2fFrameworkTests.swift in Sources */,
 				4A68C20F1DB517D10063CA01 /* APDUTests.swift in Sources */,
 				4A68C21F1DB5F3F00063CA01 /* DataReaderTests.swift in Sources */,
 				4A68C2221DB5FCA30063CA01 /* TransportHelperTests.swift in Sources */,
 				4A68C21D1DB5D77B0063CA01 /* DataWriterTests.swift in Sources */,
 				4A68C2131DB547A40063CA01 /* UtilsTests.swift in Sources */,
+				4A97C0141E6C2F9D0002911F /* CryptoHelperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AC905591E6C99300020EBDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AC905621E6C99300020EBDD /* ViewController.swift in Sources */,
+				4AC905601E6C99300020EBDD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +416,31 @@
 			target = 4A68C1EF1DB504C30063CA01 /* u2fFramework */;
 			targetProxy = 4A68C1FB1DB504C30063CA01 /* PBXContainerItemProxy */;
 		};
+		4AC905711E6C99650020EBDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AC9055C1E6C99300020EBDD /* u2fFrameworkDemo */;
+			targetProxy = 4AC905701E6C99650020EBDD /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4AC905631E6C99300020EBDD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AC905641E6C99300020EBDD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4AC905681E6C99300020EBDD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AC905691E6C99300020EBDD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4A68C2021DB504C30063CA01 /* Debug */ = {
@@ -317,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -365,7 +533,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -381,6 +549,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3HSG7M3SCR;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -388,11 +557,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = u2fFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tr1ckyf0x.u2fFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -410,11 +580,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = u2fFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tr1ckyf0x.u2fFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -423,12 +594,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3HSG7M3SCR;
 				INFOPLIST_FILE = u2fFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tr1ckyf0x.u2fFrameworkTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/u2fFrameworkDemo.app/u2fFrameworkDemo";
 			};
 			name = Debug;
 		};
@@ -436,10 +609,42 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3HSG7M3SCR;
 				INFOPLIST_FILE = u2fFrameworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tr1ckyf0x.u2fFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/u2fFrameworkDemo.app/u2fFrameworkDemo";
+			};
+			name = Release;
+		};
+		4AC9056C1E6C99300020EBDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = u2fFrameworkDemo/u2fFrameworkDemo.entitlements;
+				DEVELOPMENT_TEAM = 3HSG7M3SCR;
+				INFOPLIST_FILE = u2fFrameworkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tr1ckyf0x.u2fFrameworkDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4AC9056D1E6C99300020EBDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = u2fFrameworkDemo/u2fFrameworkDemo.entitlements;
+				DEVELOPMENT_TEAM = 3HSG7M3SCR;
+				INFOPLIST_FILE = u2fFrameworkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tr1ckyf0x.u2fFrameworkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -474,6 +679,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4AC9056E1E6C99300020EBDD /* Build configuration list for PBXNativeTarget "u2fFrameworkDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AC9056C1E6C99300020EBDD /* Debug */,
+				4AC9056D1E6C99300020EBDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
