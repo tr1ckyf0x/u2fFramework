@@ -9,9 +9,9 @@
 import Foundation
 
 protocol EndianConvertible: Integer {
-    var bigEndian: Self { get }
-    var littleEndian: Self { get }
-    var byteSwapped: Self { get }
+  var bigEndian: Self { get }
+  var littleEndian: Self { get }
+  var byteSwapped: Self { get }
 }
 
 extension Int16: EndianConvertible {}

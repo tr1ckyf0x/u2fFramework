@@ -21,6 +21,8 @@
 		4A68C21F1DB5F3F00063CA01 /* DataReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C21E1DB5F3F00063CA01 /* DataReaderTests.swift */; };
 		4A68C2201DB5FB880063CA01 /* TransportHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C21A1DB5D0600063CA01 /* TransportHelper.swift */; };
 		4A68C2221DB5FCA30063CA01 /* TransportHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2211DB5FCA30063CA01 /* TransportHelperTests.swift */; };
+		4A9564A91E6D3D08006C0BE1 /* u2fFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A68C1F01DB504C30063CA01 /* u2fFramework.framework */; };
+		4A9564AA1E6D3D08006C0BE1 /* u2fFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A68C1F01DB504C30063CA01 /* u2fFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A97C0141E6C2F9D0002911F /* CryptoHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A97C0131E6C2F9D0002911F /* CryptoHelperTests.swift */; };
 		4AC8BB6A1E6AEE930087E432 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8BB691E6AEE930087E432 /* DeviceManager.swift */; };
 		4AC8BB6C1E6AFAC20087E432 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8BB6B1E6AFAC20087E432 /* BluetoothManager.swift */; };
@@ -46,6 +48,13 @@
 			remoteGlobalIDString = 4A68C1EF1DB504C30063CA01;
 			remoteInfo = u2fFramework;
 		};
+		4A9564AB1E6D3D08006C0BE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A68C1E71DB504C30063CA01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A68C1EF1DB504C30063CA01;
+			remoteInfo = u2fFramework;
+		};
 		4AC905701E6C99650020EBDD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4A68C1E71DB504C30063CA01 /* Project object */;
@@ -54,6 +63,20 @@
 			remoteInfo = u2fFrameworkDemo;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4A9564AD1E6D3D08006C0BE1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4A9564AA1E6D3D08006C0BE1 /* u2fFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4A68C1F01DB504C30063CA01 /* u2fFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = u2fFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A9564A91E6D3D08006C0BE1 /* u2fFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,10 +301,12 @@
 				4AC905591E6C99300020EBDD /* Sources */,
 				4AC9055A1E6C99300020EBDD /* Frameworks */,
 				4AC9055B1E6C99300020EBDD /* Resources */,
+				4A9564AD1E6D3D08006C0BE1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4A9564AC1E6D3D08006C0BE1 /* PBXTargetDependency */,
 			);
 			name = u2fFrameworkDemo;
 			productName = u2fFrameworkDemo;
@@ -415,6 +441,11 @@
 			isa = PBXTargetDependency;
 			target = 4A68C1EF1DB504C30063CA01 /* u2fFramework */;
 			targetProxy = 4A68C1FB1DB504C30063CA01 /* PBXContainerItemProxy */;
+		};
+		4A9564AC1E6D3D08006C0BE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A68C1EF1DB504C30063CA01 /* u2fFramework */;
+			targetProxy = 4A9564AB1E6D3D08006C0BE1 /* PBXContainerItemProxy */;
 		};
 		4AC905711E6C99650020EBDD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -594,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3HSG7M3SCR;
 				INFOPLIST_FILE = u2fFrameworkTests/Info.plist;
@@ -609,6 +641,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3HSG7M3SCR;
 				INFOPLIST_FILE = u2fFrameworkTests/Info.plist;
@@ -623,6 +656,7 @@
 		4AC9056C1E6C99300020EBDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = u2fFrameworkDemo/u2fFrameworkDemo.entitlements;
 				DEVELOPMENT_TEAM = 3HSG7M3SCR;
@@ -638,6 +672,7 @@
 		4AC9056D1E6C99300020EBDD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = u2fFrameworkDemo/u2fFrameworkDemo.entitlements;
 				DEVELOPMENT_TEAM = 3HSG7M3SCR;
@@ -687,6 +722,7 @@
 				4AC9056D1E6C99300020EBDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
