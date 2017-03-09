@@ -58,6 +58,11 @@ extension ViewController: BluetoothManagerDelegate {
   
   func bluetoothManager(_ deviceManager: BluetoothManager, didSendDebugMessage debugMessage: String) {
     print(debugMessage)
+    textView.text = textView.text + "- \(debugMessage)\n"
+    let range = NSMakeRange(textView.text.characters.count - 1, 1)
+    UIView.setAnimationsEnabled(false)
+    textView.scrollRangeToVisible(range)
+    UIView.setAnimationsEnabled(true)
   }
   
 }

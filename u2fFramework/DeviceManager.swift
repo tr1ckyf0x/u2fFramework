@@ -181,7 +181,7 @@ extension DeviceManager: CBPeripheralDelegate {
         return
     }
     
-    delegate?.deviceManager(self, didSendDebugMessage: "Received data of size \(data.count) = \(data)")
+    delegate?.deviceManager(self, didSendDebugMessage: "Received data of size \(data.count) = \(data.hexEncodedString())")
     
     if characteristic == controlpointLengthCharacteristic {
       let reader = DataReader(data: data)

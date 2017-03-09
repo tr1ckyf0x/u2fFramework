@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A26B0701E7195760098B034 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2101DB5474F0063CA01 /* Utils.swift */; };
 		4A3BFF1E1E712F8800491E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BFF1D1E712F8800491E84 /* AppDelegate.swift */; };
 		4A3BFF201E712F8800491E84 /* ViewControllerMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BFF1F1E712F8800491E84 /* ViewControllerMac.swift */; };
 		4A3BFF221E712F8800491E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3BFF211E712F8800491E84 /* Assets.xcassets */; };
 		4A3BFF251E712F8800491E84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3BFF231E712F8800491E84 /* Main.storyboard */; };
 		4A3BFF2B1E713A5100491E84 /* U2FEmulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BFF2A1E713A5100491E84 /* U2FEmulator.swift */; };
-		4A3BFF2D1E7158A500491E84 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BFF2C1E7158A500491E84 /* Extensions.swift */; };
 		4A68C1FA1DB504C30063CA01 /* u2fFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A68C1F01DB504C30063CA01 /* u2fFramework.framework */; };
 		4A68C2011DB504C30063CA01 /* u2fFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A68C1F31DB504C30063CA01 /* u2fFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A68C20D1DB5118B0063CA01 /* APDU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C20C1DB5118B0063CA01 /* APDU.swift */; };
@@ -91,7 +91,6 @@
 		4A3BFF241E712F8800491E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A3BFF261E712F8800491E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A3BFF2A1E713A5100491E84 /* U2FEmulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = U2FEmulator.swift; sourceTree = "<group>"; };
-		4A3BFF2C1E7158A500491E84 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4A68C1F01DB504C30063CA01 /* u2fFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = u2fFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A68C1F31DB504C30063CA01 /* u2fFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = u2fFramework.h; sourceTree = "<group>"; };
 		4A68C1F41DB504C30063CA01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -168,7 +167,6 @@
 				4A3BFF1D1E712F8800491E84 /* AppDelegate.swift */,
 				4A3BFF1F1E712F8800491E84 /* ViewControllerMac.swift */,
 				4A3BFF2A1E713A5100491E84 /* U2FEmulator.swift */,
-				4A3BFF2C1E7158A500491E84 /* Extensions.swift */,
 				4A3BFF211E712F8800491E84 /* Assets.xcassets */,
 				4A3BFF231E712F8800491E84 /* Main.storyboard */,
 				4A3BFF261E712F8800491E84 /* Info.plist */,
@@ -464,7 +462,7 @@
 				4A3BFF2B1E713A5100491E84 /* U2FEmulator.swift in Sources */,
 				4A3BFF201E712F8800491E84 /* ViewControllerMac.swift in Sources */,
 				4A3BFF1E1E712F8800491E84 /* AppDelegate.swift in Sources */,
-				4A3BFF2D1E7158A500491E84 /* Extensions.swift in Sources */,
+				4A26B0701E7195760098B034 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,6 +810,7 @@
 				4A3BFF281E712F8800491E84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A68C1EA1DB504C30063CA01 /* Build configuration list for PBXProject "u2fFramework" */ = {
 			isa = XCConfigurationList;

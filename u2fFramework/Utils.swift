@@ -38,3 +38,9 @@ public extension String {
     return array
   }
 }
+
+extension Data {
+  func hexEncodedString() -> String {
+    return map { String(format: "%02hhx", $0) }.joined()
+  }
+}
