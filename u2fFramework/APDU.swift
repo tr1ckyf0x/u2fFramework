@@ -8,11 +8,11 @@
 
 import Foundation
 
-internal enum APDUError: Error {
+public enum APDUError: Error {
   case parseError
 }
 
-internal enum U2FNativeCommands: UInt8 {
+public enum U2FNativeCommands: UInt8 {
   case register =             0x81 /* Registration command */
   case authenticate =         0x82 /* Authenticate/sign command */
   case version =              0x83 /* Read version string command */
@@ -20,7 +20,7 @@ internal enum U2FNativeCommands: UInt8 {
   case authenticateBatch =    0x85 /* Authenticate/sign command for a batch of key handles */
 }
 
-internal enum P1Parameter: UInt8 {
+public enum P1Parameter: UInt8 {
   case registerHashID = 0x00 /* Version 2 hash identintifier */
   case registerID = 0x05 /* Version 2 registration identifier */
   case authEnforce = 0x03 /* Enforce user presence and sign */
@@ -28,37 +28,45 @@ internal enum P1Parameter: UInt8 {
   case authFlagTup =    0x01 /* Test of user presence set */
 }
 
-internal struct APDU {
+public struct APDU {
   private static let reservedByte: UInt8 = 0x05
   private static let derSeqByte: UInt8 = 0x30
   private static let derLen1Byte: UInt8 = 0x81
   private static let derLen2Byte: UInt8 = 0x82
   
-  let CLA: UInt8 = 0x00
-  var INS: UInt8
-  var P1: UInt8
-  var P2: UInt8
-  var LC1: UInt8
-  var LC2: UInt8
-  var LC3: UInt8
-  var DATA: [UInt8]
+  private let CLA: UInt8 = 0x00
+  private var INS: UInt8
+  private var P1: UInt8
+  private var P2: UInt8
+  private var LC1: UInt8
+  private var LC2: UInt8
+  private var LC3: UInt8
+  private var DATA: [UInt8]
   
-  init(INS: U2FNativeCommands, P1: P1Parameter, P2: UInt8 = 0, DATA: [UInt8]) {
+  public init(challengeParameter: [UInt8], applicationParameter: [UInt8]) {
+    self.init(INS: .register, P1: .registerHashID, DATA: challengeParameter + applicationParameter)
+  }
+  
+  public init(challengeParameter: [UInt8], applicationParameter: [UInt8], keyHandle: [UInt8]) {
+    self.init(INS: .authenticate, P1: .authEnforce, DATA: challengeParameter + applicationParameter + [UInt8(keyHandle.count)] + keyHandle)
+  }
+  
+  private init(INS: U2FNativeCommands, P1: P1Parameter, P2: UInt8 = 0, DATA: [UInt8]) {
     self.INS = INS.rawValue
     self.P1 = P1.rawValue
     self.P2 = P2
     let dataSizeBytes = getLSBytes(value: DATA.count, count: 3)
-    self.LC1 = dataSizeBytes[0]
-    self.LC2 = dataSizeBytes[1]
-    self.LC3 = dataSizeBytes[2]
+    LC1 = dataSizeBytes[0]
+    LC2 = dataSizeBytes[1]
+    LC3 = dataSizeBytes[2]
     self.DATA = DATA
   }
     
-  func getData() -> Data {
+  public func getData() -> Data {
     return Data(bytes: [CLA, INS, P1, P2, LC1, LC2, LC3] + DATA)
   }
     
-  static func parseRegistrationResponse(_ data: Data) throws -> (publicKey: Data, keyHandle: Data, attestationCertificate: Data, signature: Data) {
+  public static func parseRegistrationResponse(_ data: Data) throws -> (publicKey: Data, keyHandle: Data, attestationCertificate: Data, signature: Data) {
     let reader = DataReader(data: data)
     guard
       let reservedByte = reader.readNextUInt8(), reservedByte == APDU.reservedByte,
@@ -114,7 +122,7 @@ internal struct APDU {
     return (publicKey, keyHandle, finalCertificate, finalSignature)
   }
   
-  static func parseAuthenticationResponse(_ data: Data) throws -> (userPresence: UInt8, counter: UInt32, signature: Data) {
+  public static func parseAuthenticationResponse(_ data: Data) throws -> (userPresence: UInt8, counter: UInt32, signature: Data) {
     
     let reader = DataReader(data: data)
     

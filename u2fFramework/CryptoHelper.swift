@@ -9,7 +9,7 @@
 import Foundation
 import Security
 
-@objc final class CryptoHelper: NSObject {
+@objc internal final class CryptoHelper: NSObject {
   
   static func verifyRegisterSignature(certificate: Data, signature: Data, keyHandle: Data, publicKey: Data, applicationParameter: Data, challenge: Data) ->  Bool {
     guard let extractedSignaturePoints = extractPointsFromSignature(signature: signature)

@@ -9,7 +9,7 @@
 import Foundation
 import CoreBluetooth
 
-enum BluetoothManagerState: String {
+public enum BluetoothManagerState: String {
   case scanning
   case connecting
   case connected
@@ -17,31 +17,31 @@ enum BluetoothManagerState: String {
   case disconnected
 }
 
-protocol BluetoothManagerDelegate {
+public protocol BluetoothManagerDelegate {
   func bluetoothManagerDidUpdateState(_ bluetoothManager: BluetoothManager)
   func bluetoothManager(_ deviceManager: BluetoothManager, didSendDebugMessage debugMessage: String)
   func bluetoothManager(_ deviceManager: BluetoothManager, didReceiveAPDU apdu: Data)
 }
 
-final class BluetoothManager: NSObject {
+public final class BluetoothManager: NSObject {
   fileprivate var centralManager: CBCentralManager?
   fileprivate var deviceManager: DeviceManager?
-  fileprivate(set) var state = BluetoothManagerState.disconnected {
+  public fileprivate(set) var state = BluetoothManagerState.disconnected {
     didSet {
       delegate?.bluetoothManagerDidUpdateState(self)
       delegate?.bluetoothManager(self, didSendDebugMessage: "New state: \(state.rawValue)")
     }
   }
-  var delegate: BluetoothManagerDelegate?
-  var deviceName: String? { return deviceManager?.deviceName }
+  public var delegate: BluetoothManagerDelegate?
+  public var deviceName: String? { return deviceManager?.deviceName }
   
-  func scanForDevice() {
+  public func scanForDevice() {
     guard centralManager == nil else { return }
     centralManager = CBCentralManager(delegate: self, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: NSNumber(value: true)])
     state = .scanning
   }
   
-  func stopSession() {
+  public func stopSession() {
     guard let centralManager = centralManager else { return }
     
     switch state {
@@ -57,7 +57,7 @@ final class BluetoothManager: NSObject {
     }
   }
   
-  func exchangeAPDU(data: Data) {
+  public func exchangeAPDU(data: Data) {
     guard state == .connected else { return }
     delegate?.bluetoothManager(self, didSendDebugMessage: "Exchanging APDU = \(data)")
     deviceManager?.exchangeAPDU(data: data)
@@ -97,7 +97,7 @@ extension BluetoothManager: DeviceManagerDelegate {
 }
 
 extension BluetoothManager: CBCentralManagerDelegate {
-  func centralManagerDidUpdateState(_ central: CBCentralManager) {
+  public func centralManagerDidUpdateState(_ central: CBCentralManager) {
     if central.state == .poweredOn && state == .scanning {
       delegate?.bluetoothManager(self, didSendDebugMessage: "Bluetooth stack is ready, scanning devices...")
       let serviceUUID = CBUUID(string: DeviceManager.deviceServiceUUID)
@@ -105,7 +105,7 @@ extension BluetoothManager: CBCentralManagerDelegate {
     }
   }
   
-  func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+  public func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
     guard state == .scanning else { return }
     guard let connectable = advertisementData[CBAdvertisementDataIsConnectable] as? NSNumber, connectable.boolValue else { return }
     
@@ -117,18 +117,18 @@ extension BluetoothManager: CBCentralManagerDelegate {
     state = .connecting
   }
   
-  func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+  public func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
     guard state == .connecting, let deviceManager = deviceManager else { return }
     deviceManager.bind()
   }
   
-  func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
+  public func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
     guard state == .connecting, let _ = deviceManager else { return }
     delegate?.bluetoothManager(self, didSendDebugMessage: "Failed to connect device \(peripheral.identifier.uuidString), error: \(error?.localizedDescription)")
     resetState()
   }
   
-  func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+  public func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
     switch state {
     case .connecting, .connected, . disconnecting:
       guard let _ = deviceManager else { return }

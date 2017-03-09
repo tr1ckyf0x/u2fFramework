@@ -20,7 +20,7 @@ func getLSBytes<T: Integer>(value: T, count: Int = MemoryLayout<T>.size) -> [UIn
   return bytes.reversed()
 }
 
-internal extension String {
+public extension String {
   func hexToUInt8Array() -> [UInt8]? {
     let trimmedString = self.trimmingCharacters(in: CharacterSet(charactersIn: "<> ")).replacingOccurrences(of: " ", with: "")
     let regex = try! NSRegularExpression(pattern: "^[0-9a-f]*$", options: .caseInsensitive)

@@ -8,23 +8,23 @@
 
 import Foundation
 
+internal enum CommandType: UInt8 {
+  case ping = 0x81
+  case keepAlive = 0x82
+  case message = 0x83
+  case error = 0xbf
+}
+
+internal enum ChunkType {
+  case ping
+  case keepAlive
+  case message
+  case error
+  case continuation
+  case unknown
+}
+
 internal class TransportHelper {
-  
-  internal enum CommandType: UInt8 {
-    case ping = 0x81
-    case keepAlive = 0x82
-    case message = 0x83
-    case error = 0xbf
-  }
-    
-  internal enum ChunkType {
-    case ping
-    case keepAlive
-    case message
-    case error
-    case continuation
-    case unknown
-  }
   
   static func getChunkType(data: Data) -> ChunkType {
     let reader = DataReader(data: data)

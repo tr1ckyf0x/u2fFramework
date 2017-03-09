@@ -38,9 +38,7 @@ final class DeviceManager: NSObject {
   fileprivate var notifyCharacteristic: CBCharacteristic?
   fileprivate var controlpointLengthCharacteristic: CBCharacteristic?
   fileprivate(set) var state = DeviceManagerState.notBound {
-    didSet {
-      delegate?.deviceManagerDidUpdateState(self)
-    }
+    didSet { delegate?.deviceManagerDidUpdateState(self) }
   }
   
   init(peripheral: CBPeripheral) {

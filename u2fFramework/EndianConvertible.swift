@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol EndianConvertible: Integer {
+internal protocol EndianConvertible: Integer {
   var bigEndian: Self { get }
   var littleEndian: Self { get }
   var byteSwapped: Self { get }
