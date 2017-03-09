@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A3BFF1E1E712F8800491E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BFF1D1E712F8800491E84 /* AppDelegate.swift */; };
+		4A3BFF201E712F8800491E84 /* ViewControllerMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BFF1F1E712F8800491E84 /* ViewControllerMac.swift */; };
+		4A3BFF221E712F8800491E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3BFF211E712F8800491E84 /* Assets.xcassets */; };
+		4A3BFF251E712F8800491E84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A3BFF231E712F8800491E84 /* Main.storyboard */; };
+		4A3BFF2B1E713A5100491E84 /* U2FEmulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BFF2A1E713A5100491E84 /* U2FEmulator.swift */; };
+		4A3BFF2D1E7158A500491E84 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BFF2C1E7158A500491E84 /* Extensions.swift */; };
 		4A68C1FA1DB504C30063CA01 /* u2fFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A68C1F01DB504C30063CA01 /* u2fFramework.framework */; };
 		4A68C2011DB504C30063CA01 /* u2fFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A68C1F31DB504C30063CA01 /* u2fFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A68C20B1DB505980063CA01 /* u2fFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C20A1DB505980063CA01 /* u2fFramework.swift */; };
 		4A68C20D1DB5118B0063CA01 /* APDU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C20C1DB5118B0063CA01 /* APDU.swift */; };
 		4A68C20F1DB517D10063CA01 /* APDUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C20E1DB517D10063CA01 /* APDUTests.swift */; };
 		4A68C2111DB5474F0063CA01 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2101DB5474F0063CA01 /* Utils.swift */; };
@@ -79,12 +84,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A3BFF1B1E712F8700491E84 /* u2fEmulatorMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = u2fEmulatorMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A3BFF1D1E712F8800491E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A3BFF1F1E712F8800491E84 /* ViewControllerMac.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMac.swift; sourceTree = "<group>"; };
+		4A3BFF211E712F8800491E84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A3BFF241E712F8800491E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A3BFF261E712F8800491E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A3BFF2A1E713A5100491E84 /* U2FEmulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = U2FEmulator.swift; sourceTree = "<group>"; };
+		4A3BFF2C1E7158A500491E84 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4A68C1F01DB504C30063CA01 /* u2fFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = u2fFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A68C1F31DB504C30063CA01 /* u2fFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = u2fFramework.h; sourceTree = "<group>"; };
 		4A68C1F41DB504C30063CA01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A68C1F91DB504C30063CA01 /* u2fFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = u2fFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A68C2001DB504C30063CA01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A68C20A1DB505980063CA01 /* u2fFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = u2fFramework.swift; sourceTree = "<group>"; };
 		4A68C20C1DB5118B0063CA01 /* APDU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APDU.swift; sourceTree = "<group>"; };
 		4A68C20E1DB517D10063CA01 /* APDUTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APDUTests.swift; sourceTree = "<group>"; };
 		4A68C2101DB5474F0063CA01 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -117,6 +129,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4A3BFF181E712F8700491E84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A68C1EC1DB504C30063CA01 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,12 +162,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A3BFF1C1E712F8700491E84 /* u2fEmulatorMac */ = {
+			isa = PBXGroup;
+			children = (
+				4A3BFF1D1E712F8800491E84 /* AppDelegate.swift */,
+				4A3BFF1F1E712F8800491E84 /* ViewControllerMac.swift */,
+				4A3BFF2A1E713A5100491E84 /* U2FEmulator.swift */,
+				4A3BFF2C1E7158A500491E84 /* Extensions.swift */,
+				4A3BFF211E712F8800491E84 /* Assets.xcassets */,
+				4A3BFF231E712F8800491E84 /* Main.storyboard */,
+				4A3BFF261E712F8800491E84 /* Info.plist */,
+			);
+			path = u2fEmulatorMac;
+			sourceTree = "<group>";
+		};
 		4A68C1E61DB504C30063CA01 = {
 			isa = PBXGroup;
 			children = (
 				4A68C1F21DB504C30063CA01 /* u2fFramework */,
 				4A68C1FD1DB504C30063CA01 /* u2fFrameworkTests */,
 				4AC9055E1E6C99300020EBDD /* u2fFrameworkDemo */,
+				4A3BFF1C1E712F8700491E84 /* u2fEmulatorMac */,
 				4A68C1F11DB504C30063CA01 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -159,6 +193,7 @@
 				4A68C1F01DB504C30063CA01 /* u2fFramework.framework */,
 				4A68C1F91DB504C30063CA01 /* u2fFrameworkTests.xctest */,
 				4AC9055D1E6C99300020EBDD /* u2fFrameworkDemo.app */,
+				4A3BFF1B1E712F8700491E84 /* u2fEmulatorMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,7 +203,6 @@
 			children = (
 				4A68C1F31DB504C30063CA01 /* u2fFramework.h */,
 				4A68C1F41DB504C30063CA01 /* Info.plist */,
-				4A68C20A1DB505980063CA01 /* u2fFramework.swift */,
 				4A68C20C1DB5118B0063CA01 /* APDU.swift */,
 				4AD623C01E6C146100E70307 /* Managers */,
 				4AD623BF1E6C144D00E70307 /* Utils */,
@@ -257,6 +291,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4A3BFF1A1E712F8700491E84 /* u2fEmulatorMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A3BFF291E712F8800491E84 /* Build configuration list for PBXNativeTarget "u2fEmulatorMac" */;
+			buildPhases = (
+				4A3BFF171E712F8700491E84 /* Sources */,
+				4A3BFF181E712F8700491E84 /* Frameworks */,
+				4A3BFF191E712F8700491E84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = u2fEmulatorMac;
+			productName = u2fEmulatorMac;
+			productReference = 4A3BFF1B1E712F8700491E84 /* u2fEmulatorMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 		4A68C1EF1DB504C30063CA01 /* u2fFramework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A68C2041DB504C30063CA01 /* Build configuration list for PBXNativeTarget "u2fFramework" */;
@@ -319,10 +370,14 @@
 		4A68C1E71DB504C30063CA01 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Владислав Лисянский";
 				TargetAttributes = {
+					4A3BFF1A1E712F8700491E84 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
 					4A68C1EF1DB504C30063CA01 = {
 						CreatedOnToolsVersion = 8.0;
 						LastSwiftMigration = 0800;
@@ -360,11 +415,21 @@
 				4A68C1EF1DB504C30063CA01 /* u2fFramework */,
 				4A68C1F81DB504C30063CA01 /* u2fFrameworkTests */,
 				4AC9055C1E6C99300020EBDD /* u2fFrameworkDemo */,
+				4A3BFF1A1E712F8700491E84 /* u2fEmulatorMac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4A3BFF191E712F8700491E84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A3BFF221E712F8800491E84 /* Assets.xcassets in Resources */,
+				4A3BFF251E712F8800491E84 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A68C1EE1DB504C30063CA01 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,6 +457,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4A3BFF171E712F8700491E84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A3BFF2B1E713A5100491E84 /* U2FEmulator.swift in Sources */,
+				4A3BFF201E712F8800491E84 /* ViewControllerMac.swift in Sources */,
+				4A3BFF1E1E712F8800491E84 /* AppDelegate.swift in Sources */,
+				4A3BFF2D1E7158A500491E84 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A68C1EB1DB504C30063CA01 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,7 +475,6 @@
 				4AD623B71E6C136B00E70307 /* GMEllipticCurveCrypto.m in Sources */,
 				4A68C2171DB5D03E0063CA01 /* DataReader.swift in Sources */,
 				4AC8BB6A1E6AEE930087E432 /* DeviceManager.swift in Sources */,
-				4A68C20B1DB505980063CA01 /* u2fFramework.swift in Sources */,
 				4A68C2201DB5FB880063CA01 /* TransportHelper.swift in Sources */,
 				4A68C2181DB5D03E0063CA01 /* DataWriter.swift in Sources */,
 				4AD623B91E6C136B00E70307 /* GMEllipticCurveCrypto+hash.m in Sources */,
@@ -455,6 +530,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4A3BFF231E712F8800491E84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A3BFF241E712F8800491E84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		4AC905631E6C99300020EBDD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -474,6 +557,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4A3BFF271E712F8800491E84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3HSG7M3SCR;
+				INFOPLIST_FILE = u2fEmulatorMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tr1ckyf0x.u2fEmulatorMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4A3BFF281E712F8800491E84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3HSG7M3SCR;
+				INFOPLIST_FILE = u2fEmulatorMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tr1ckyf0x.u2fEmulatorMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		4A68C2021DB504C30063CA01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -688,6 +805,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4A3BFF291E712F8800491E84 /* Build configuration list for PBXNativeTarget "u2fEmulatorMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A3BFF271E712F8800491E84 /* Debug */,
+				4A3BFF281E712F8800491E84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		4A68C1EA1DB504C30063CA01 /* Build configuration list for PBXProject "u2fFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

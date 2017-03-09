@@ -23,7 +23,8 @@ protocol DeviceManagerDelegate {
 
 final class DeviceManager: NSObject {
   
-  static let deviceServiceUUID = "0000FFFD-0000-1000-8000-00805F9B34FB"
+  //static let deviceServiceUUID = "0000FFFD-0000-1000-8000-00805F9B34FB"
+  static let deviceServiceUUID = "FDFF"
   static let writeCharacteristicUUID = "F1D0FFF1-DEAA-ECEE-B42F-C9BA7ED623BB"
   static let notifyCharacteristicUUID = "F1D0FFF2-DEAA-ECEE-B42F-C9BA7ED623BB"
   static let controlpointLengthCharacteristicUUID = "F1D0FFF3-DEAA-ECEE-B42F-C9BA7ED623BB"
