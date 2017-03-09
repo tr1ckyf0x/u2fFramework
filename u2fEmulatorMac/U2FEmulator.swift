@@ -49,7 +49,7 @@ extension U2FEmulator: CBPeripheralManagerDelegate {
     
     controlPointCharacteristic = CBMutableCharacteristic(type: controlPointUUID, properties: [.write], value: nil, permissions: [.writeable])
     statusCharacteristic = CBMutableCharacteristic(type: statusUUID, properties: [.notify], value: nil, permissions: [])
-    controlPointLengthCharacteristic = CBMutableCharacteristic(type: controlPointLengthUUID, properties: .read, value: Data(bytes: [20]), permissions: [.readable])
+    controlPointLengthCharacteristic = CBMutableCharacteristic(type: controlPointLengthUUID, properties: .read, value: Data(bytes: [0x00, 0x14]), permissions: [.readable])
     u2fService = CBMutableService(type: u2fServiceUUID, primary: true)
     guard
       let _ = controlPointCharacteristic,
