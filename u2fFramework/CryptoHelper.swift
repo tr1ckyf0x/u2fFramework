@@ -9,9 +9,9 @@
 import Foundation
 import Security
 
-@objc internal final class CryptoHelper: NSObject {
+@objc public final class CryptoHelper: NSObject {
   
-  static func verifyRegisterSignature(certificate: Data, signature: Data, keyHandle: Data, publicKey: Data, applicationParameter: Data, challenge: Data) ->  Bool {
+  public static func verifyRegisterSignature(certificate: Data, signature: Data, keyHandle: Data, publicKey: Data, applicationParameter: Data, challenge: Data) ->  Bool {
     guard let extractedSignaturePoints = extractPointsFromSignature(signature: signature)
       else { return false }
     
@@ -38,7 +38,7 @@ import Security
     return crypto!.hashSHA256AndVerifySignature(extractedSignature, for: data)
   }
   
-  static func verifyAuthenticateSignature(publicKey: Data, userPresenceFlag: UInt8, counter: UInt32, signature: Data, applicationParameter: Data, challenge: Data) ->  Bool {
+  public static func verifyAuthenticateSignature(publicKey: Data, userPresenceFlag: UInt8, counter: UInt32, signature: Data, applicationParameter: Data, challenge: Data) ->  Bool {
     guard let extractedSignaturePoints = extractPointsFromSignature(signature: signature)
       else { return false }
     

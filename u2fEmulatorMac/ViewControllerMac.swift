@@ -13,15 +13,24 @@ class ViewControllerMac: NSViewController {
   
   var u2fEmulator: U2FEmulator?
 
+  @IBOutlet weak var textView: NSScrollView!
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
+  
+  @IBAction func startAdvertisment(_ sender: Any) {
     u2fEmulator = U2FEmulator(delegate: self)
+  }
+  
+  @IBAction func reset(_ sender: Any) {
+    u2fEmulator = nil
   }
   
 }
 
 extension ViewControllerMac: U2FEmulatorDelegate {
   func u2fEmulator(_ u2fEmulator: U2FEmulator, didSendDebugMessage debugMessage: String) {
+    textView.documentView?.insertText(" - \(debugMessage)\n")
     print(debugMessage)
   }
 }

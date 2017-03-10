@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,8 +47,14 @@
                                     <action selector="authenticateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EqR-7g-zA9"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vLU-gd-Frx">
-                                <rect key="frame" x="16" y="142" width="343" height="505"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pjL-pe-76s">
+                                <rect key="frame" x="112" y="142" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pjL-pe-76s" secondAttribute="height" multiplier="1:1" id="Tjw-tB-hsn"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VoU-z7-Via">
+                                <rect key="frame" x="16" y="300" width="343" height="347"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -55,23 +62,27 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="VoU-z7-Via" secondAttribute="trailing" id="2kT-SL-26f"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VoU-z7-Via" secondAttribute="bottom" constant="20" id="9Rt-Jm-dZr"/>
                             <constraint firstItem="MUA-Uy-x4V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="CDZ-a5-lPN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qhJ-Zv-cWh" secondAttribute="trailing" id="CQK-x7-6YT"/>
                             <constraint firstItem="qhJ-Zv-cWh" firstAttribute="top" secondItem="pJl-Dk-Itc" secondAttribute="bottom" constant="8" id="Gwt-aH-0Ih"/>
                             <constraint firstAttribute="leadingMargin" secondItem="MUA-Uy-x4V" secondAttribute="leading" id="HhO-9w-8nb"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="vLU-gd-Frx" secondAttribute="leading" id="I1z-cf-b8M"/>
+                            <constraint firstItem="pjL-pe-76s" firstAttribute="top" secondItem="qhJ-Zv-cWh" secondAttribute="bottom" constant="8" id="Jd1-S7-Jb0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pjL-pe-76s" secondAttribute="trailing" constant="97" id="Lli-14-ZeC"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="VoU-z7-Via" secondAttribute="leading" id="RQq-fh-qk5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pJl-Dk-Itc" secondAttribute="trailing" id="WeT-PV-nJJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MUA-Uy-x4V" secondAttribute="trailing" id="XuS-E1-WqM"/>
                             <constraint firstAttribute="leadingMargin" secondItem="pJl-Dk-Itc" secondAttribute="leading" id="YpE-kv-S4Z"/>
-                            <constraint firstItem="vLU-gd-Frx" firstAttribute="top" secondItem="qhJ-Zv-cWh" secondAttribute="bottom" constant="8" id="dQt-kF-gTc"/>
                             <constraint firstAttribute="leadingMargin" secondItem="qhJ-Zv-cWh" secondAttribute="leading" id="e1G-nD-hVT"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vLU-gd-Frx" secondAttribute="bottom" constant="20" id="l98-fc-Vk9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vLU-gd-Frx" secondAttribute="trailing" id="onO-YP-LqJ"/>
+                            <constraint firstItem="pjL-pe-76s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="96" id="kcX-ba-eJl"/>
+                            <constraint firstItem="VoU-z7-Via" firstAttribute="top" secondItem="pjL-pe-76s" secondAttribute="bottom" constant="8" id="vYd-RP-uaj"/>
                             <constraint firstItem="pJl-Dk-Itc" firstAttribute="top" secondItem="MUA-Uy-x4V" secondAttribute="bottom" constant="8" id="xST-KD-mnZ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="vLU-gd-Frx" id="3bD-w1-sXa"/>
+                        <outlet property="imageView" destination="pjL-pe-76s" id="R8T-Iy-aHh"/>
+                        <outlet property="textView" destination="VoU-z7-Via" id="UBJ-DX-nlq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

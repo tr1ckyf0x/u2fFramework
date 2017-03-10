@@ -39,7 +39,7 @@ public extension String {
   }
 }
 
-extension Data {
+public extension Data {
   func hexEncodedString() -> String {
     return map { String(format: "%02hhx", $0) }.joined()
   }

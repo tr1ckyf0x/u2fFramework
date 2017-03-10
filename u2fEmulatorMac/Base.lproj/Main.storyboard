@@ -4,6 +4,7 @@
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -685,7 +686,85 @@
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AxG-Ua-AGP">
+                                <rect key="frame" x="20" y="208" width="440" height="42"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dR3-vg-LCA">
+                                        <rect key="frame" x="-6" y="-7" width="228" height="53"/>
+                                        <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IgK-ZQ-35c">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="reset:" target="XfG-lQ-9wD" id="vuq-nn-WMx"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fbi-oE-pa4">
+                                        <rect key="frame" x="218" y="-7" width="228" height="53"/>
+                                        <buttonCell key="cell" type="push" title="Start advertisment" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="b9v-fB-wQm">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="startAdvertisment:" target="XfG-lQ-9wD" id="xHQ-Fg-6J5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dR3-vg-LCA" firstAttribute="height" secondItem="AxG-Ua-AGP" secondAttribute="height" id="HbX-cw-4ns"/>
+                                    <constraint firstItem="Fbi-oE-pa4" firstAttribute="height" secondItem="AxG-Ua-AGP" secondAttribute="height" id="mGQ-Lq-C9v"/>
+                                    <constraint firstAttribute="height" constant="42" id="rVW-QC-j7t"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozz-SX-tXC">
+                                <rect key="frame" x="20" y="20" width="440" height="180"/>
+                                <clipView key="contentView" id="TQS-pk-Vkw">
+                                    <rect key="frame" x="1" y="1" width="438" height="178"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="6nw-66-n5Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="438" height="178"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="438" height="178"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="P73-bp-7H9">
+                                    <rect key="frame" x="-100" y="-100" width="438" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="mos-vI-AsA">
+                                    <rect key="frame" x="423" y="1" width="16" height="178"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ozz-SX-tXC" secondAttribute="bottom" constant="20" id="LXu-hW-BEm"/>
+                            <constraint firstAttribute="trailing" secondItem="AxG-Ua-AGP" secondAttribute="trailing" constant="20" id="SfC-ND-MrY"/>
+                            <constraint firstItem="AxG-Ua-AGP" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="cSK-ww-eql"/>
+                            <constraint firstItem="Ozz-SX-tXC" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="gdH-pu-DYk"/>
+                            <constraint firstItem="AxG-Ua-AGP" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="jB1-Lr-G0W"/>
+                            <constraint firstAttribute="trailing" secondItem="Ozz-SX-tXC" secondAttribute="trailing" constant="20" id="qst-Sq-tF3"/>
+                            <constraint firstItem="Ozz-SX-tXC" firstAttribute="top" secondItem="AxG-Ua-AGP" secondAttribute="bottom" constant="8" id="xHa-sm-cFE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="Ozz-SX-tXC" id="P14-VZ-XV7"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
