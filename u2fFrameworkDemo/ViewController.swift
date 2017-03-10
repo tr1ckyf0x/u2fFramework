@@ -43,6 +43,15 @@ class ViewController: UIViewController {
     let authenticateAPDU = APDU(challengeParameter: challengeParameter, applicationParameter: applicationParameter, keyHandle: handle)
     bluetoothManager.exchangeAPDU(data: authenticateAPDU.getData())
   }
+  
+  func appendLogMessage(_ message: String) {
+    print(message)
+    textView.text = textView.text + "- \(message)\n"
+    let range = NSMakeRange(textView.text.characters.count - 1, 1)
+    //UIView.setAnimationsEnabled(false)
+    textView.scrollRangeToVisible(range)
+    //UIView.setAnimationsEnabled(true)
+  }
 
 }
 
@@ -53,16 +62,20 @@ extension ViewController: BluetoothManagerDelegate {
   }
   
   func bluetoothManager(_ deviceManager: BluetoothManager, didReceiveAPDU apdu: Data) {
-    print(#function)
+    do {
+      let registerResponse = try APDU.parseRegistrationResponse(apdu)
+      appendLogMessage("Successfully parsed registration response")
+      appendLogMessage("Certificate = \(registerResponse.attestationCertificate.hexEncodedString())")
+      appendLogMessage("KeyHandle = \(registerResponse.keyHandle.hexEncodedString())")
+      appendLogMessage("PublicKey = \(registerResponse.publicKey.hexEncodedString())")
+      appendLogMessage("Signature = \(registerResponse.signature.hexEncodedString())")
+      keyHandle = Array(registerResponse.keyHandle)
+    }
+    catch { appendLogMessage("Parse error occured") }
   }
   
   func bluetoothManager(_ deviceManager: BluetoothManager, didSendDebugMessage debugMessage: String) {
-    print(debugMessage)
-    textView.text = textView.text + "- \(debugMessage)\n"
-    let range = NSMakeRange(textView.text.characters.count - 1, 1)
-    UIView.setAnimationsEnabled(false)
-    textView.scrollRangeToVisible(range)
-    UIView.setAnimationsEnabled(true)
+    appendLogMessage(debugMessage)
   }
   
 }

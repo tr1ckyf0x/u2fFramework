@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4A26B0701E7195760098B034 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2101DB5474F0063CA01 /* Utils.swift */; };
+		4A26B0721E71A1900098B034 /* TransportHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C21A1DB5D0600063CA01 /* TransportHelper.swift */; };
+		4A26B0731E71A1A90098B034 /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2141DB5D03E0063CA01 /* DataReader.swift */; };
+		4A26B0741E71A1AB0098B034 /* DataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2151DB5D03E0063CA01 /* DataWriter.swift */; };
+		4A26B0751E71A1BB0098B034 /* EndianConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2161DB5D03E0063CA01 /* EndianConvertible.swift */; };
 		4A3BFF1E1E712F8800491E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BFF1D1E712F8800491E84 /* AppDelegate.swift */; };
 		4A3BFF201E712F8800491E84 /* ViewControllerMac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3BFF1F1E712F8800491E84 /* ViewControllerMac.swift */; };
 		4A3BFF221E712F8800491E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A3BFF211E712F8800491E84 /* Assets.xcassets */; };
@@ -26,6 +30,7 @@
 		4A68C21F1DB5F3F00063CA01 /* DataReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C21E1DB5F3F00063CA01 /* DataReaderTests.swift */; };
 		4A68C2201DB5FB880063CA01 /* TransportHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C21A1DB5D0600063CA01 /* TransportHelper.swift */; };
 		4A68C2221DB5FCA30063CA01 /* TransportHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2211DB5FCA30063CA01 /* TransportHelperTests.swift */; };
+		4A723DB81E724A7200E3F7F5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68C2101DB5474F0063CA01 /* Utils.swift */; };
 		4A9564A91E6D3D08006C0BE1 /* u2fFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A68C1F01DB504C30063CA01 /* u2fFramework.framework */; };
 		4A9564AA1E6D3D08006C0BE1 /* u2fFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A68C1F01DB504C30063CA01 /* u2fFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A97C0141E6C2F9D0002911F /* CryptoHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A97C0131E6C2F9D0002911F /* CryptoHelperTests.swift */; };
@@ -462,6 +467,10 @@
 				4A3BFF2B1E713A5100491E84 /* U2FEmulator.swift in Sources */,
 				4A3BFF201E712F8800491E84 /* ViewControllerMac.swift in Sources */,
 				4A3BFF1E1E712F8800491E84 /* AppDelegate.swift in Sources */,
+				4A26B0741E71A1AB0098B034 /* DataWriter.swift in Sources */,
+				4A26B0721E71A1900098B034 /* TransportHelper.swift in Sources */,
+				4A26B0731E71A1A90098B034 /* DataReader.swift in Sources */,
+				4A26B0751E71A1BB0098B034 /* EndianConvertible.swift in Sources */,
 				4A26B0701E7195760098B034 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +513,7 @@
 			files = (
 				4AC905621E6C99300020EBDD /* ViewController.swift in Sources */,
 				4AC905601E6C99300020EBDD /* AppDelegate.swift in Sources */,
+				4A723DB81E724A7200E3F7F5 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
