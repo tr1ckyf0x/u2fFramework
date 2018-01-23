@@ -588,7 +588,7 @@
 				DEVELOPMENT_TEAM = 3HSG7M3SCR;
 				INFOPLIST_FILE = u2fEmulatorMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tr1ckyf0x.u2fEmulatorMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -605,7 +605,7 @@
 				DEVELOPMENT_TEAM = 3HSG7M3SCR;
 				INFOPLIST_FILE = u2fEmulatorMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tr1ckyf0x.u2fEmulatorMac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
