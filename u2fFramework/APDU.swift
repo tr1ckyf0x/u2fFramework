@@ -51,7 +51,7 @@ public struct APDU {
     self.init(INS: .authenticate, P1: .authEnforce, DATA: challengeParameter + applicationParameter + [UInt8(keyHandle.count)] + keyHandle)
   }
   
-  private init(INS: U2FNativeCommands, P1: P1Parameter, P2: UInt8 = 0, DATA: [UInt8]) {
+  public init(INS: U2FNativeCommands, P1: P1Parameter, P2: UInt8 = 0, DATA: [UInt8]) {
     self.INS = INS.rawValue
     self.P1 = P1.rawValue
     self.P2 = P2
